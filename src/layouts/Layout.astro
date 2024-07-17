@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es" class="!scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+      name="description"
+      content="¡Hola! Soy Leiner Hoyos, desarrollador web fullstack de Colombia, 3 años de experiencia. ¡Descubre cómo mi pasión por el desarrollo web puede agregar valor a tu próximo proyecto!"
+    />
+    <meta
+      name="keywords"
+      content="Desarrollador web, Fullstack, MERN Stack, Frontend, Backend, HTML, CSS, JavaScript, Experiencia en desarrollo web"
+    />
+    <meta name="author" content="Leiner Hoyos" />
+    <meta
+      property="og:title"
+      content="Leiner Hoyos - Desarrollador Web Fullstack"
+    />
+    <meta
+      property="og:description"
+      content="¡Hola! Soy Leiner Hoyos, desarrollador web fullstack de Colombia, 3 años de experiencia. ¡Descubre cómo mi pasión por el desarrollo web puede agregar valor a tu próximo proyecto!"
+    />
+    <meta property="og:image" content="https://leinerhoyos.netlify.app/porfolio.png" />
+    <meta property="og:url" content="https://leinerhoyos.netlify.app">
+    <link rel="icon" type="image/png" href="/icon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Leiner Hoyos - Desarrollador Web Fullstack</title>
+		<link rel="stylesheet"
+		href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+	</head>
+	<body>
+		<slot />
+		<div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_80%_at_50%_0%,#000_70%,transparent_100%)] -z-10"></div>
+
+	</body>
+	<script is:inline>
+		const getThemePreference = () => {
+			if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+				return localStorage.getItem('theme');
+			}
+			return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+		};
+		const isDark = getThemePreference() === 'dark';
+		document.documentElement.classList[isDark ? 'add' : 'remove']('dark');
+	 
+		if (typeof localStorage !== 'undefined') {
+			const observer = new MutationObserver(() => {
+				const isDark = document.documentElement.classList.contains('dark');
+				localStorage.setItem('theme', isDark ? 'dark' : 'light');
+			});
+			observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+		}
+	</script>
+</html>
+
+<style is:global>
+</style>

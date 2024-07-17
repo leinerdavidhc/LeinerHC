@@ -1,0 +1,83 @@
+<header class="flex relative w-full min-h-[90vh] justify-center md:items-center" id="inicio">
+  <div
+    class="flex flex-col justify-center items-center gap-3 h-max"
+  >
+    <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+      <div
+      class="md:size-40 size-36 rounded-full overflow-hidden flex justify-center items-center"
+    >
+      <img src="/leinerhc.png" alt="Leiner Hoyos" class="object-cover" />
+    </div>
+    <div class="flex flex-col gap-2">
+      <div class="flex flex-col gap-2 justify-center md:items-start items-center">
+        <h1 class="md:text-5xl text-4xl font-bold text-tertiary">Leiner Hoyos</h1>
+        <h2 class="font-semibold md:text-3xl text-2xl">Desarrollador Full-Stack</h2>
+      </div>
+
+      <div class="flex gap-3 justify-center items-center bg-card p-2 md:w-max w-[80%] self-center md:self-start">
+        <div class="pulse"></div>
+        <p class="text-sm text-green-300">Disponible</p>
+      </div>
+    </div>
+    </div>
+
+    <div class="flex flex-col justify-center items-center gap-4">
+      <p class="p-2  md:w-[80%] lg:w-[60%] text-center text-balance text-base md:text-lg">
+        <strong class="text-tertiary font-bold">+3 años de experiencia</strong>
+        Desarrollador web colombiano especializado en materializar ideas en soluciones innovadoras y eficientes. <span class="font-bold">"Tu sueño alcanza el espacio infinito."</span>
+      </p>
+    </div>
+
+    <div class="flex justify-center items-center gap-2 flex-wrap">
+      <a
+        href="https://github.com/leinerdavidhc"
+        class="group bg-button p-2 flex justify-center items-center hover:dark:text-tertiary hover:border-tertiary gap-2 text-sm md:text-base hover:scale-105 transition-all duration-200 font-normal text-gray-500 dark:text-gray-400"
+      >
+      <i class='bx bxl-github md:text-2xl text-xl'></i>
+        Github
+      </a>
+
+      <a
+        href="https://linkedin.com/in/leinerdavidhc"
+        class="group bg-button p-2 flex justify-center items-center hover:dark:text-tertiary hover:border-tertiary gap-2 text-sm md:text-base hover:scale-105 transition-all duration-200 font-normal text-gray-500 dark:text-gray-400"
+      >
+      <i class='bx bxl-linkedin-square md:text-2xl text-xl'></i>
+        Linkedin
+      </a>
+      <button
+      id="descargarBtn"
+      class="group bg-button p-2 flex justify-center items-center hover:dark:text-tertiary hover:border-tertiary gap-2 text-nowrap text-sm md:text-base hover:scale-105 transition-all duration-200 font-normal text-gray-500 dark:text-gray-400"
+    >
+    <i class='bx bx-arrow-to-bottom md:text-2xl text-xl'></i>
+      Descargar CV
+    </button>
+      <a
+      href=mailto:leinerdavidhc20@gmail.com"
+      class="group bg-button p-2 flex justify-center items-center hover:dark:text-tertiary hover:border-tertiary gap-2 text-sm md:text-base hover:scale-105 transition-all duration-200 font-normal text-gray-500 dark:text-gray-400"
+    >
+    <i class='bx bxs-envelope md:text-2xl text-xl'></i>
+      leinerdavidhc20@gmail.com
+    </a>
+
+    </div>
+  </div>
+  <span class="absolute md:bottom-20 bottom-0 text-nowrap flex justify-center items-center gap-2 animate-bounce animate-infinite text-tertiary font-semibold p-3">Sobre mí <i class='bx bxs-chevrons-down text-2xl'></i></span>
+</header>
+
+<script>
+  const buttonDescarga = document.getElementById("descargarBtn") as HTMLElement;
+  buttonDescarga.addEventListener("click", function () {
+    var urlPdf = "/HOJA DE VIDA LEINER DAVID HOYOS CABRERA 1.pdf";
+
+    var nombreArchivo = "HOJA DE VIDA LEINER DAVID HOYOS CABRERA.pdf";
+
+    var linkDescarga = document.createElement("a");
+    linkDescarga.href = urlPdf;
+    linkDescarga.download = nombreArchivo;
+
+    document.body.appendChild(linkDescarga);
+    linkDescarga.click();
+
+    document.body.removeChild(linkDescarga);
+  });
+</script>
