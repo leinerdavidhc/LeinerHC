@@ -162,3 +162,12 @@ nav {
   }
 
 }
+
+html{
+  scrollbar-width: none;
+}
+
+.decription-project{
+  scrollbar-color: #ed500a transparent;
+  scrollbar-width: thin;
+}

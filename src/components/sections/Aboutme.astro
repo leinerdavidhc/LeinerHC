@@ -1,29 +1,30 @@
 ---
 import Tecnologias from '@/components/sections/Tecnologias.astro'
 ---
-<section id="sobremi" class="flex flex-col gap-20 p-5">
-    <section class="flex items-center">
-        <article class="flex flex-col gap-5 md:max-w-[80%]">
-          <h2 class="md:text-4xl text-3xl font-bold text-tertiary">
-            <i class="bx bxs-user-circle md:text-3xl text-2xl"></i> Sobre mí
-          </h2>
-          <p>
-            ¡Hola!👋 Soy <strong class="text-tertiary">Leiner Hoyos</strong>, un
-            desarrollador web junior de Colombia, con 21 años y 3 años de experiencia
-            en el desarrollo web. Estudio ingeniería de sistemas, tengo conocimientos
-            en diversas tecnologías tanto frontend como backend.
-          </p>
-          <p>
-            <strong>Mi objetivo</strong>🏅 es empoderar a las personas para alcanzar
-            sus sueños a través del desarrollo web.
-          </p>
-      
-          <p>
-            Me considero 💻 <strong
-              >trabajador, simpático y disfruto trabajando en equipo</strong
-            >.Tengo habilidades para resolver problemas y soy autodidacta.
-          </p>
-        </article>
+<section id="sobremi" class="flex flex-col gap-20 p-5 mt-0 md:mt-20 min-h-[90vh]">
+    <section class="flex md:flex-row flex-col gap-4 justify-center items-center">
+      <article class="flex flex-col gap-5 md:max-w-[80%] order-2 md:order-1">
+        <h2 class="md:text-4xl text-3xl font-bold text-tertiary">
+          <i class="bx bxs-user-check md:text-3xl text-2xl"></i> Sobre mí
+        </h2>
+        <p>
+          ¡Hola!👋 Soy <strong class="text-tertiary">Leiner Hoyos</strong>, un
+          desarrollador web junior de Colombia, con 21 años y 3 años de experiencia
+          en el desarrollo web. Estudio ingeniería de sistemas, tengo conocimientos
+          en diversas tecnologías tanto frontend como backend.
+        </p>
+        <p>
+          <strong>Mi objetivo</strong>🏅 es empoderar a las personas para alcanzar
+          sus sueños a través del desarrollo web.
+        </p>
+    
+        <p>
+          Me considero 💻 <strong
+            >trabajador, simpático y disfruto trabajando en equipo</strong
+          >.Tengo habilidades para resolver problemas y soy autodidacta.
+        </p>
+      </article>
+      <img width="200" height="200" src="/me.png" alt="Leiner Hoyos" class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square bg-card" style="object-position: 50% 50%">
       </section>
       <Tecnologias/>
 </section>
