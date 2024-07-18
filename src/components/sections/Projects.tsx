@@ -102,7 +102,7 @@ export default function Projects() {
               <p className="text-base font-normal text-gray-500 dark:text-gray-400 transition-all duration-300 group-hover:h-32 h-12 group-hover:overflow-auto line-clamp-2 group-hover:line-clamp-none decription-project">
   {project.description}
 </p>
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
                 {project.skills.map((skill, index) => (
                   <div className="flex gap-2  bg-zinc-900 p-1 rounded-md justify-center items-center">
                     <img src={skill.icon} alt={skill.name} className="size-5" />
